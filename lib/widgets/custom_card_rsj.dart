@@ -14,12 +14,14 @@ final String? nombre;
       ),
 child: Column(
   children: [
-     Image(
+     FadeInImage(
       //'https://wallpapers.com/images/hd/4k-star-wars-the-force-awakens-acm74zjpq3j2pywa.jpg'
       image: NetworkImage(imagenUrl),
       width: double.infinity,
       height: 260,
-      fit: BoxFit.cover,
+      fit: BoxFit.cover, 
+      placeholder: const AssetImage('assets/jar-loading.gif'),
+      fadeInDuration: const Duration(microseconds: 3000),
       ),
 
       Container(

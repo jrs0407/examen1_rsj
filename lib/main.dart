@@ -1,3 +1,4 @@
+import 'package:examen_rsj/routes/app_routes.dart';
 import 'package:examen_rsj/screens/home_screen_rsj.dart';
 import 'package:examen_rsj/theme/app_theme_rsj.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: HomeScreen(),
+      routes: AppRoutes.getAppRoutes(),
+      onGenerateRoute: AppRoutes.onGenerateRoute,
       theme: AppTheme.lightTheme,
     );
   }

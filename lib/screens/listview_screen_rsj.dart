@@ -1,3 +1,4 @@
+import 'package:examen_rsj/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class ListviewScreen extends StatelessWidget {
@@ -8,20 +9,28 @@ class ListviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Avatar'),
+        title: Text('Flutter App'),
         actions: const [
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: EdgeInsets.only(right: 30),
             child: CircleAvatar(
-              child: Text('JR'),
-              backgroundColor: Colors.greenAccent,
+              backgroundImage: NetworkImage('https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg'),
             ),
           )
         ],
         ),
-      body: const Center(
-         child: Text('ListviewScreen'),
-      ),
+      body: ListView.separated(
+        itemBuilder: (context, index)=> ListTile(
+          leading: Icon(AppRoutes.MenuOptions[index].icon),
+          title: Text(AppRoutes.MenuOptions[index].name),
+          onTap: (){
+            
+            Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);
+          },
+        ),
+        separatorBuilder: (context, index) => const Divider(),
+        itemCount: AppRoutes.MenuOptions.length,
+      )
     );
   }
 }

@@ -25,8 +25,8 @@ class CustomTextFormField extends StatelessWidget {
       obscureText: obscureText,
       onChanged: (value)=> formValues[formProperty]=value,
       validator: (value){
-        if (value!.length<3){
-          return 'minimo 3 caracteres';
+        if (value!.length<6){
+          return 'minimo 6 caracteres';
         }
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,

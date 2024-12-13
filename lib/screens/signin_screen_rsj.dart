@@ -47,7 +47,7 @@ class SigninScreen extends StatelessWidget {
               const SizedBox(height: 30),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ListviewScreen(),
@@ -58,10 +58,14 @@ class SigninScreen extends StatelessWidget {
                     width: double.infinity,
                     child: Center(child: Text('Sign in')),
                   )),
+                  
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: ()=> Navigator.pop(context)),
     );
   }
 }

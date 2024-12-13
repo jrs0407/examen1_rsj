@@ -1,10 +1,7 @@
-import 'package:examen_rsj/screens/home_screen_rsj.dart';
-import 'package:examen_rsj/screens/listview_screen_rsj.dart';
-import 'package:examen_rsj/screens/monitores_screen_rsj.dart';
-import 'package:examen_rsj/screens/pistas_screen_rsj.dart';
-import 'package:examen_rsj/screens/signin_screen_rsj.dart';
+
 import 'package:flutter/material.dart';
 import 'package:examen_rsj/models/menu_option.dart';
+import '../screens/screens.dart';
 
 
 
@@ -22,11 +19,6 @@ class AppRoutes {
       icon: Icons.person, 
       name: 'Monitores', 
       screen: const MonitoresScreen()),
-      MenuOption(
-      route: 'reservas', 
-      icon: Icons.phone, 
-      name: 'Reservas', 
-      screen: const ListviewScreen()),
       
   ];
 

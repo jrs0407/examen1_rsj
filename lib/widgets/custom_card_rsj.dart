@@ -13,7 +13,7 @@ final String? nombre;
         borderRadius: BorderRadius.circular(15)
       ),
 child: Column(
-  children: [
+  children: [ 
      FadeInImage(
       //'https://wallpapers.com/images/hd/4k-star-wars-the-force-awakens-acm74zjpq3j2pywa.jpg'
       image: NetworkImage(imagenUrl),
